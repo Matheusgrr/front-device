@@ -1,0 +1,47 @@
+.box-results {
+  width: 90vw;
+  max-width: 40rem;
+  height: 20rem;
+  background-color: #c6c6c6;
+  border-radius: 18px;
+}
+.list {
+  width: 92%;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.list > li {
+  width: 30vw;
+  max-width: 14rem;
+}
+
+.short-li {
+  width: 2.5rem !important;
+}
+
+.box-create {
+  width: 50vw;
+  max-width: 30rem;
+  min-height: 30rem;
+  background-color: #e7e7e7;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid black;
+}
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.form-inputs * {
+  height: 2rem;
+  margin: 10px;
+  border-radius: 18px;
+  border: 2px solid #ff8b00;
+  font-weight: bold;
+}

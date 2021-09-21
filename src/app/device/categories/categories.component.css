@@ -1,0 +1,46 @@
+.box-results {
+  width: 96%;
+  min-height: 20rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  width: 8rem;
+  height: 6rem;
+  margin: 0.5rem;
+  padding: 4px;
+  border-radius: 12px;
+  background-color: #c6c6c6;
+}
+.category-card * {
+  text-align: center;
+}
+
+.box-create {
+  width: 50vw;
+  max-width: 25rem;
+  min-height: 30rem;
+  background-color: #e7e7e7;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid black;
+}
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.form-inputs * {
+  height: 2rem;
+  margin: 10px;
+  border-radius: 18px;
+  border: 2px solid #ff8b00;
+  font-weight: bold;
+}

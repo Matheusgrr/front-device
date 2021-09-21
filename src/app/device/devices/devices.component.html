@@ -1,0 +1,52 @@
+<div class="centralize box-content">
+  <div class="box-logo">
+    <h1>Devices</h1>
+    <img src="/assets/eldorado-logo.png" alt="" routerLink="" />
+  </div>
+  <div class="box-results">
+    <ul class="list" *ngFor="let device of devices">
+      <li class="short-li">{{ device.id }}</li>
+      <li>Color: {{ device.color }}</li>
+      <li>PartNumber: {{ device.partNumber }}</li>
+      <li (click)="deleteDevice(device.id)" class="short-li delete-item">
+        Delete
+      </li>
+    </ul>
+  </div>
+  <button class="button-create" (click)="toggleNewDevice()">
+    Creata new device
+  </button>
+</div>
+
+<div class="box-create centralize" *ngIf="showCreateDevice">
+  <h1>New Device</h1>
+  <form class="form-inputs" [formGroup]="formDevice">
+    <input
+      type="text"
+      placeholder="Color"
+      formControlName="color"
+      onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
+    />
+    <input
+      type="number"
+      placeholder="PartNumber"
+      formControlName="partNumber"
+    />
+    <select name="cars" formControlName="category">
+      <option
+        name="Category"
+        *ngFor="let category of categories"
+        value="{{ category.id }}"
+      >
+        {{ category.name }}
+      </option>
+    </select>
+  </form>
+  <button
+    class="button-create"
+    (click)="submitNewDevice()"
+    [disabled]="formDevice.invalid"
+  >
+    Creata new device
+  </button>
+</div>

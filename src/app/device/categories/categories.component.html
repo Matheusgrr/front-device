@@ -1,0 +1,29 @@
+<div class="centralize box-content">
+  <div class="box-logo">
+    <h1>Categories</h1>
+    <img src="/assets/eldorado-logo.png" alt="" routerLink="" />
+  </div>
+  <div class="box-results">
+    <div class="category-card" *ngFor="let category of categories">
+      <h4>{{ category.name }}</h4>
+      <p (click)="deleteCategory(category.id)" class="delete-item">Delete</p>
+    </div>
+  </div>
+  <button class="button-create" (click)="toggleNewCategory()">
+    Creata new category
+  </button>
+</div>
+
+<div class="box-create centralize" *ngIf="showCreateCategory">
+  <h1>New Category</h1>
+  <form class="form-inputs" [formGroup]="formCategory">
+    <input type="text" placeholder="Category Name" formControlName="name" />
+  </form>
+  <button
+    class="button-create"
+    (click)="submitNewCategory()"
+    [disabled]="formCategory.invalid"
+  >
+    Creata new category
+  </button>
+</div>
